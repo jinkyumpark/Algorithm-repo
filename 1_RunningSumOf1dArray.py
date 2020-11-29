@@ -1,7 +1,7 @@
 #Running Sum of 1d Array - from LeetCode 1480
 
-#Runtime: -81.41%
-#Memory Usage: -12.46%
+#Runtime: -81.41%, 36ms
+#Memory Usage: -12.46%, 14.4MB
 
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
