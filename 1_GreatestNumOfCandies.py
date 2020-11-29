@@ -4,8 +4,8 @@
 #return bool of whether it is possible to distribute extra candies
 #so that each respective kid has the greatest number of candies
 
-#Runtime: -5.55%
-#Memory Usage: -83.10%
+#Runtime: -5.55%, 56ms
+#Memory Usage: -83.10%, 14MB
 
 class Solution():
     def kidsWithCandies(self, candies: list[int], extraCandies: int) -> list[bool]:
