@@ -4,33 +4,53 @@
 #return bool of whether it is possible to distribute extra candies
 #so that each respective kid has the greatest number of candies
 
-def runningSum(nums):
-    sum_num = 0
-    out_nums = []
-    for i in range(len(nums)):
-        sum_num += nums[i]
-        out_nums.append(sum_num)
-    return out_nums
+def kidsWithCandies(candies, extraCandies):
+    isGreatest = []
+    for i in range(len(candies)):
+        isGreatest.append(False)
 
+    for i in range(len(candies)):
+        candies[i] += extraCandies
+        indexList = greatestIndex(candies)
+        for j in range(len(indexList)):
+            if indexList[j] == i:
+                isGreatest[i] = True
+        candies[i] -= extraCandies
+    return isGreatest
 
-def getInput():
-    len_num = int(input("Length: "))
-    out_num = []
-    for i in range(len_num):
-        tmp_num = int(input("Element: "))
-        out_num.append(tmp_num)
-    return out_num
+def greatestIndex(in_list):
+    greatest = -1
+    index_at = -1
+    index_list = []
 
+    for i in range(len(in_list)):
+        if greatest < in_list[i]:
+            greatest = in_list[i]
+            index_at = i
+    index_list.append(index_at)
 
-def printArray(in_arr):
+    for i in range(len(in_list)):
+        if in_list[i] == in_list[index_at] and i != index_at:
+            index_list.append(in_list[i])
+    return index_list
+
+def get_input():
+    out_list = []
+    num_input = int(input("How many number of input: "))
+    for i in range(num_input):
+        tmp = int(input("Enter element: "))
+        out_list.append(tmp)
+    return out_list
+
+def print_list(in_list):
     print("[", end="")
-    for i in range(len(in_arr)):
-        print(in_arr[i], end="")
-        if i != len(in_arr) - 1:
-            print(end=", ")
+    for i in range(len(in_list)):
+        print(in_list[i], end="")
+        if i is not len(in_list)-1:
+            print(", ", end="")
     print("]", end="")
 
-
-in_num = getInput()
-out_num = runningSum(in_num)
-printArray(out_num)
+in_list = get_input()
+extra = int(input("Extra Candies: "))
+out_list = kidsWithCandies(in_list, extra)
+print_list(out_list)
