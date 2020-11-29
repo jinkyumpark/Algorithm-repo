@@ -1,7 +1,7 @@
 #Defanging an IP Address - from LeetCode 1108
 
-#Faster: -31.74%
-#Memory Usage: -73.77%
+#Runtime: -31.74%, 28ms
+#Memory Usage: -73.77%, 14.3MB
 
 class Solution:
     def defangIPaddr(self, address: str)->str:
