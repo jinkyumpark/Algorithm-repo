@@ -1,3 +1,4 @@
+#Unsolved
 #Verbal Arithmetic Puzzle - from LeetCode 1307
 
 #Each character is decoded as one digit (0-9)
