@@ -1,3 +1,4 @@
+#Unsolved
 #Strong Password Checker - from LeetCode 420
 
 #it has at least 6 at most 20 character
