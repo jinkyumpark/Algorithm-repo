@@ -24,7 +24,14 @@ void bubbleSort(int* inArr[]){
 }
 
 void insertionSort(int* inArr[]){
-
+	size_t n = sizeof(inArr)/sizeof(int);
+	for(int i = 0; i < n; i++){
+		for(int j = i; j > 0; j--){
+			if(inArr[j] > inArr[i]){
+				swap(&inArr[i], &inArr[j]);
+			}
+		}
+	}
 }
 
 void selectionSort(int* inArr[]){
