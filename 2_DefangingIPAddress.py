@@ -12,3 +12,7 @@ class Solution:
             else:
                 defanged = defanged +  '[.]'
         return defanged
+
+class Solution(object):
+    def defangIPaddr(self, address):
+        return address.replace(".","[.]")
