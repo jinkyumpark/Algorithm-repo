@@ -1,6 +1,9 @@
-package programmingWithMosh;
-
 public class LinkedList {
+	private Node{
+		private int value;
+		private Node next;
+	}
+	
 	private Node first;
 	private Node last;
 	
